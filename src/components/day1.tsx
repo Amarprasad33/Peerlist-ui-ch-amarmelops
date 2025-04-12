@@ -132,6 +132,7 @@ export default function FluidMenu() {
                 </svg>
             </div>
             <div className="text-3xl text-gray-500 font-light" style={{ fontFamily: 'var(--font-geist-mono)' }}>Open the menu at the top left corner</div>
+            <div className="text-sm text-zinc-600 self-end cursor-pointer"><span style={{ fontFamily: 'var(--font-geist-mono)' }}>Made by </span><span className="text-blue-600"><a href="https://x.com/Amarmelops1" target="blank">@Amarmelops1</a></span></div>
         </div>
         
     );
