@@ -37,6 +37,8 @@ export default function Home() {
           </div> 
         </div>}
       </div>
+
+      <div className="absolute bottom-0 right-28 text-sm text-zinc-600 self-end cursor-pointer"><span style={{ fontFamily: 'var(--font-geist-mono)' }}>Made by </span><span className="text-blue-600"><a href="https://x.com/Amarmelops1" target="blank">@Amarmelops1</a></span></div>
       
     </div>
   );
