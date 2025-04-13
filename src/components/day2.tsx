@@ -10,13 +10,6 @@ const STATUS = {
   SAFE: 'safe',
   WARNING: 'warning',
 };
-
-const statusStyles = {
-  analyzing: 'bg-blue-100 text-blue-600',
-  safe: 'bg-green-100 text-green-600',
-  warning: 'bg-red-100 text-red-600',
-};
-
 // const icons = {
 //   analyzing: <ArrowPathIcon className="h-5 w-5 animate-spin" />,
 //   safe: <CheckCircleIcon className="h-5 w-5" />,
@@ -54,9 +47,7 @@ export default function FluidState() {
       transition: { duration: 0.6, ease: 'easeInOut', delay: 0.4 }
     }
   };
-
-  const isAnalyzing = status === STATUS.ANALYZING;
-
+  
   return (
     <div className="relative h-full w-full flex items-center justify-center">
         <div className="w-[30rem] h-64 rounded-3xl flex items-center justify-center border border-zinc-300">
