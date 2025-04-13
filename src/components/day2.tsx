@@ -91,8 +91,8 @@ export default function FluidState() {
                         }
                         {status === STATUS.SAFE && <motion.svg 
                             className='mt-[3px]' width="18" height="18" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            initial={{x: -10}}
-                            animate={{x: 0}}
+                            initial={{x: -10, scale: 0.3}}
+                            animate={{x: 0, scale: 1}}
                             transition={{ duration: 0.4 }}
                         >
                             <g clipPath="url(#clip0_28_4)">
