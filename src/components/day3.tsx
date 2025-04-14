@@ -22,7 +22,7 @@ export default function AnimatedCheckbox() {
   );
 }
 
-function AnimatedCheckboxComponent({ displayText}: any) {
+function AnimatedCheckboxComponent({ displayText }: { displayText: string }) {
 
   const [checked, setChecked] = useState(false);
   const [initialChecked, setInitialChecked] = useState(false);
