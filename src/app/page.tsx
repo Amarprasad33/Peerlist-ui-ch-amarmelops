@@ -3,9 +3,10 @@ import { useState } from "react";
 import FluidMenu from "@/components/day1";
 import FluidState from "@/components/day2";
 import AnimatedCheckbox from "@/components/day3";
+import PricingToggle from "@/components/day4";
 
 export default function Home() {
-  const [clickedDay, setClickedDay] = useState(3);
+  const [clickedDay, setClickedDay] = useState(4);
   const days = [1, 2, 3, 4, 5];
   return (
     <div className="relative w-full h-screen bg-white border">
@@ -23,11 +24,7 @@ export default function Home() {
         {clickedDay === 1 && <FluidMenu />}
         {clickedDay === 2 && <FluidState />}
         {clickedDay === 3 && <AnimatedCheckbox />}
-        {clickedDay === 4 && <div className="relative h-full w-full flex items-center justify-center">
-          <div className="w-[30rem] h-64 rounded-3xl flex items-center justify-center border border-zinc-300"> 
-              <div className="text-xl text-zinc-400 font-medium">Not Yet Announced</div>
-          </div> 
-        </div>}
+        {clickedDay === 4 && <PricingToggle />}
         {clickedDay === 5 && <div className="relative h-full w-full flex items-center justify-center">
           <div className="w-[30rem] h-64 rounded-3xl flex items-center justify-center border border-zinc-300"> 
               <div className="text-xl text-zinc-400 font-medium">Not Yet Announced</div>
