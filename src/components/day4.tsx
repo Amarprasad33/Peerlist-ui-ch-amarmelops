@@ -54,19 +54,20 @@ const PricingToggle = () => {
                       Premium
                   </motion.div>}
                   <motion.div className={`flex items-center ${active? 'gap-6' : 'gap-1'} ${active? 'text-white' : 'text-black'} text-sm font-normal`}
-                      initial={{
-                        translateY: 0
-                      }}
-                      animate={{
-                        translateY: active ? 8 : -6,
-                        scale: active ? 1.3 : 1,
-                        opacity: 1,
-                      }}
-                      exit={{
-                        scale: 1,
-                        translateY: -6,
-                      }}
-                      transition={{ duration: 0.35, ease: "easeInOut" }}
+                    initial={{
+                      translateY: 0,
+                      opacity: 0
+                    }}
+                    animate={{
+                      translateY: active ? 8 : -6,
+                      scale: active ? 1.3 : 1,
+                      opacity: 1,
+                    }}
+                    exit={{
+                      scale: 1,
+                      translateY: 0,
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
                     {active && <motion.div
                       key="premiumToggle"
