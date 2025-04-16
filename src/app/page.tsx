@@ -7,7 +7,7 @@ import PricingToggle from "@/components/day4";
 import SharedLayoutTabs from "@/components/day5";
 
 export default function Home() {
-  const [clickedDay, setClickedDay] = useState(4);
+  const [clickedDay, setClickedDay] = useState(5);
   const days = [1, 2, 3, 4, 5];
   return (
     <div className="relative w-full h-screen bg-white border">
