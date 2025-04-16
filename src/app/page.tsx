@@ -4,6 +4,7 @@ import FluidMenu from "@/components/day1";
 import FluidState from "@/components/day2";
 import AnimatedCheckbox from "@/components/day3";
 import PricingToggle from "@/components/day4";
+import SharedLayoutTabs from "@/components/day5";
 
 export default function Home() {
   const [clickedDay, setClickedDay] = useState(4);
@@ -25,11 +26,7 @@ export default function Home() {
         {clickedDay === 2 && <FluidState />}
         {clickedDay === 3 && <AnimatedCheckbox />}
         {clickedDay === 4 && <PricingToggle />}
-        {clickedDay === 5 && <div className="relative h-full w-full flex items-center justify-center">
-          <div className="w-[30rem] h-64 rounded-3xl flex items-center justify-center border border-zinc-300"> 
-              <div className="text-xl text-zinc-400 font-medium">Not Yet Announced</div>
-          </div> 
-        </div>}
+        {clickedDay === 5 && <SharedLayoutTabs />}
       </div>
 
       <div className="absolute bottom-0 right-28 text-sm text-zinc-600 self-end cursor-pointer"><span style={{ fontFamily: 'var(--font-geist-mono)' }}>Made by </span><span className="text-blue-600"><a href="https://x.com/Amarmelops1" target="blank">@Amarmelops1</a></span></div>
