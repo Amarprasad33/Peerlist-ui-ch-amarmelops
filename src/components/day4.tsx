@@ -42,54 +42,54 @@ const PricingToggle = () => {
               onClick={() => setActive(true)}
             >
               <div className="relative flex flex-col justify-center items-center">
-                  <AnimatePresence>
-                    {!active && <motion.div key="pricingToggle" className={`font-semibold text-lg cursor-pointer ${active? 'text-white' : 'text-black'}`} style={{opacity: '1', top: '8px'}}
-                        initial={{ opacity: 1, translateY: -4 }}
-                        animate={{ 
-                            opacity: active? 0 : 1, 
-                            // scale: active? 0 : 1, 
-                            transition: { duration: 300, ease: "easeInOut" }
-                        }}
-                        exit={{ opacity: 0, scale: 1 }}
-                    >
-                        Premium
-                    </motion.div>}
-                    <motion.div className={`flex items-center ${active? 'gap-6' : 'gap-1'} ${active? 'text-white' : 'text-black'} text-sm font-normal`}
+                <AnimatePresence>
+                  {!active && <motion.div key="pricingToggle" className={`font-semibold text-lg cursor-pointer ${active? 'text-white' : 'text-black'}`} style={{opacity: '1', top: '8px'}}
+                      initial={{ opacity: 1, translateY: -4 }}
+                      animate={{ 
+                          opacity: active? 0 : 1, 
+                          // scale: active? 0 : 1, 
+                          transition: { duration: 300, ease: "easeInOut" }
+                      }}
+                      exit={{ opacity: 0, scale: 1 }}
+                  >
+                      Premium
+                  </motion.div>}
+                  <motion.div className={`flex items-center ${active? 'gap-6' : 'gap-1'} ${active? 'text-white' : 'text-black'} text-sm font-normal`}
+                    initial={{
+                      translateY: 0,
+                      opacity: 0
+                    }}
+                    animate={{
+                      translateY: active ? 8 : -6,
+                      scale: active ? 1.3 : 1,
+                      opacity: 1,
+                    }}
+                    exit={{
+                      scale: 1,
+                      translateY: 0,
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    {active && <motion.div
+                      key="premiumToggle"
+                      className="absolute -left-[1.7rem] -top-[9px] w-24 h-10 rounded-full bg-white z-10"
                       initial={{
-                        translateY: 0,
-                        opacity: 0
+                          x: '0%'
                       }}
                       animate={{
-                        translateY: active ? 8 : -6,
-                        scale: active ? 1.3 : 1,
-                        opacity: 1,
+                          translateX: premiumToggle ? "96px" : "0px",
+                          // width: active ? "50%" : "50%",
                       }}
-                      exit={{
-                        scale: 1,
-                        translateY: 0,
+                      transition={{ 
+                          duration: 0.3, 
+                          ease: "easeInOut", 
                       }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                    >
-                      {active && <motion.div
-                        key="premiumToggle"
-                        className="absolute -left-[1.7rem] -top-[9px] w-24 h-10 rounded-full bg-white z-10"
-                        initial={{
-                            x: '0%'
-                        }}
-                        animate={{
-                            translateX: premiumToggle ? "96px" : "0px",
-                            // width: active ? "50%" : "50%",
-                        }}
-                        transition={{ 
-                            duration: 0.3, 
-                            ease: "easeInOut", 
-                        }}
-                      ></motion.div>}
-                        <span className={`z-40 cursor-pointer ${!premiumToggle && 'text-black'}`} onClick={() => setPremiumToggle(false)}>Monthly</span>
-                        <span className={`block size-1 rounded-full bg-black ${active? 'text-white' : 'text-black'}`}></span>
-                        <span className={`z-40 cursor-pointer ${premiumToggle && 'text-black'}`} onClick={() => setPremiumToggle(true)}>Annual</span>
-                    </motion.div>
-                  </AnimatePresence>
+                    ></motion.div>}
+                      <span className={`z-40 cursor-pointer ${!premiumToggle && 'text-black'}`} onClick={() => setPremiumToggle(false)}>Monthly</span>
+                      <span className={`block size-1 rounded-full bg-black ${active? 'text-white' : 'text-black'}`}></span>
+                      <span className={`z-40 cursor-pointer ${premiumToggle && 'text-black'}`} onClick={() => setPremiumToggle(true)}>Annual</span>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
             </div>
