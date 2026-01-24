@@ -10,7 +10,7 @@ export default function Home() {
   const [clickedDay, setClickedDay] = useState(5);
   const days = [1, 2, 3, 4, 5];
   return (
-    <div className="relative w-full h-screen bg-white border">
+    <div className="relative w-full h-screen bg-white">
       {/* Nav Menu */}
       <div className="absolute right-32 top-8 flex flex-col gap-1 text-gray-400 z-50" style={{ fontFamily: 'var(--font-geist-mono)' }}>
         {days.map((day, idx) => (
